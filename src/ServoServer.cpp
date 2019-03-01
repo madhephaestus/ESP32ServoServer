@@ -7,7 +7,7 @@
 
 #include "ServoServer.h"
 
-ServoServer::ServoServer() :PacketEventAbstract(1894){
+ServoServer::ServoServer() :PacketEventAbstract(1962){
 	map[0]= 15;
 	map[1]= 2;
 	map[2]= 4;
@@ -24,7 +24,6 @@ ServoServer::ServoServer() :PacketEventAbstract(1894){
 	map[13]= 25;
 	map[14]= 33;
 	map[15]= 32;
-
 
 	for(int i=0;i<MAX_POSSIBLE_SERVOS;i++){
 		listOfServo[i].attach(map[i], 1000, 2000);
