@@ -3,3 +3,6 @@
 /ESP32ServoServer.ino.txt
 /.cproject
 /.project
+/.settings
+/core
+/libraries
