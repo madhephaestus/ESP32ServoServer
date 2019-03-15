@@ -43,6 +43,7 @@ void setup()
 // The loop function is called in an endless loop
 void loop()
 {
+	sensor->loop();
 	manager.loop();
 	if (manager.getState() == Connected)
 		coms.server(); // @suppress("Method cannot be resolved")
