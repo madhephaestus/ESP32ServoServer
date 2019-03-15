@@ -14,12 +14,13 @@ UDPSimplePacket coms;
 // WIfi stack managment state machine
 WifiManager manager;
 //The setup function is called once at startup of the sketch
-String * name = new String("KChef");
+String * name = new String("hidDevice");
 
 void setup()
 {
 	manager.setup();
 	coms.attach(new NameCheckerServer(name)); // @suppress("Method cannot be resolved")
+
 	coms.attach(new ServoServer());
 }
 
