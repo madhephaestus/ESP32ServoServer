@@ -26,8 +26,8 @@ ServoServer::ServoServer() :PacketEventAbstract(1962){
 	map[15]= 32;
 
 	for(int i=0;i<MAX_POSSIBLE_SERVOS;i++){
-		listOfServo[i].attach(map[i], 1000, 2000);
-
+		listOfServo[i].attach(map[i], 1000, 2400);
+		listOfServo[i].write(90);
 	}
 }
 
