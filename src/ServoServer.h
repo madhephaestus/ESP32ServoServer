@@ -16,7 +16,7 @@ class ServoServer : public PacketEventAbstract {
 private :
 	Servo listOfServo[MAX_POSSIBLE_SERVOS];
 	int map [MAX_POSSIBLE_SERVOS];
-
+	bool firstRun=true;
 public:
 	ServoServer();
 	virtual ~ServoServer();

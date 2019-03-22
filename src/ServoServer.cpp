@@ -24,12 +24,7 @@ ServoServer::ServoServer() :PacketEventAbstract(1962){
 	map[13]= 25;
 	map[14]= 33;
 	map[15]= 32;
-
-	for(int i=0;i<MAX_POSSIBLE_SERVOS;i++){
-		//listOfServo[i].setPeriodHertz(100);
-		listOfServo[i].attach(map[i], 1000, 2000);
-		listOfServo[i].write(90);
-	}
+	firstRun=true;
 }
 
 ServoServer::~ServoServer() {
@@ -42,6 +37,11 @@ ServoServer::~ServoServer() {
 void ServoServer::event(float * buffer){
 	uint8_t * bBuffer = (uint8_t *)buffer;
 	for(int i=0;i<MAX_POSSIBLE_SERVOS;i++){
+		if(firstRun){
+			listOfServo[i].attach(map[i], 1000, 2000);
+		}
 		listOfServo[i].write(bBuffer[i]);
 	}
+	if(firstRun)
+		firstRun=false;
 }
