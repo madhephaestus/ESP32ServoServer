@@ -22,17 +22,19 @@ GetIMU * sensor;
 void setup()
 {
 	sensor = new GetIMU();
-	/* Initialise the sensor
-	if (!bno.begin()) {
+
+	//Initialise the sensor
+	if (bno.begin()) {
+		delay(1000);
+		bno.setExtCrystalUse(true);
+		sensor->startSensor(&bno);
+	}else{
 		Serial.print(
 				"Ooops, no BNO055 detected ... Check your wiring or I2C ADDR!");
-		delay(1000);
 	}
 
-	delay(1000);
-	bno.setExtCrystalUse(true);
-	sensor->startSensor(&bno);
-	 * */
+
+
 
 	manager.setup();
 	coms.attach(new NameCheckerServer(name)); // @suppress("Method cannot be resolved")
