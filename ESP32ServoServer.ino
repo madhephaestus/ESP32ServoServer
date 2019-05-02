@@ -37,6 +37,7 @@ void setup()
 
 
 	manager.setup();
+	manager.disconnect();
 	coms.attach(new NameCheckerServer(name)); // @suppress("Method cannot be resolved")
 	coms.attach(sensor);
 	coms.attach(new ServoServer());
