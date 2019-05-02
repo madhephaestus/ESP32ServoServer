@@ -5,7 +5,6 @@ A simplePacketComs server for servos on ESP32
 In the Arduino Library Manager, search for and install:
 
 ```
-WiiChuck
 Esp32SimplePacketComs
 Esp32WifiManager
 SimplePacketComs
