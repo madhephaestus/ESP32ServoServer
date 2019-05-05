@@ -52,7 +52,7 @@ boolean GetIMU::loop() {
 	}
 	updateIndex++;
 	if (updateIndex == 4) {
-		updateIndex = 0;
+		updateIndex = 3;
 		return true;
 	}
 	return false;
