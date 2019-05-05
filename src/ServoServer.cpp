@@ -38,7 +38,7 @@ void ServoServer::event(float * buffer){
 	uint8_t * bBuffer = (uint8_t *)buffer;
 	for(int i=0;i<MAX_POSSIBLE_SERVOS;i++){
 		if(firstRun){
-			listOfServo[i].setPeriodHertz(200);
+			listOfServo[i].setPeriodHertz(330);
 			listOfServo[i].attach(map[i], 1000, 2000);
 
 		}
