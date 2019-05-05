@@ -12,6 +12,28 @@ ESP32Servo
 Adafruit_BNO055
 Adafruit Unified Sensor Library
 ```
+# Index Mapping
+
+```
+	map[0]= 15;
+	map[1]= 2;
+	map[2]= 4;
+	map[3]= 16;
+	map[4]= 17;
+	map[5]= 5;
+	map[6]= 19;
+	map[7]= 23;
+	map[8]= 13;
+	map[9]= 12;
+	map[10]= 14;
+	map[11]= 27;
+	map[12]= 26;
+	map[13]= 25;
+	map[14]= 33;
+	map[15]= 32;
+  ```
+  
+# Limb Use Mapping
 
 <p>Attach the servos on the following pins:</p>
 
