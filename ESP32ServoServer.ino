@@ -21,6 +21,7 @@ Adafruit_BNO055 bno;
 GetIMU * sensor;
 void setup()
 {
+	manager.setupScan();
 	sensor = new GetIMU();
 
 	//Initialise the sensor
@@ -33,12 +34,7 @@ void setup()
 				"Ooops, no BNO055 detected ... Check your wiring or I2C ADDR!");
 	}
 
-
-
-
-	manager.setup();
-	manager.disconnect();
-	coms.attach(new NameCheckerServer(name)); // @suppress("Method cannot be resolved")
+	coms.attach(new NameCheckerServer(name));
 	coms.attach(sensor);
 	coms.attach(new ServoServer());
 }
@@ -49,7 +45,7 @@ void loop()
 	sensor->loop();
 	manager.loop();
 	if (manager.getState() == Connected)
-		coms.server(); // @suppress("Method cannot be resolved")
+		coms.server();
 	else {
 		return;
 	}
