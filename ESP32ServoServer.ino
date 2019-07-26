@@ -23,6 +23,7 @@ void setup()
 {
 	manager.setupScan();
 	sensor = new GetIMU();
+	Serial.println("Loading with name: "+name[0]);
 
 	//Initialise the sensor
 	if (bno.begin()) {
