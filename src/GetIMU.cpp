@@ -19,7 +19,7 @@ void GetIMU::event(float * buffer) {
 
 }
 bool GetIMU::loop() {
-	Serial.println("My GetIMU");
+	//Serial.println("My GetIMU");
 	if (!started)
 		return true;
 	imu::Vector<3> a;
