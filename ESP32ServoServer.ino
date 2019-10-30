@@ -5,6 +5,7 @@
 #include <PacketEvent.h>
 #include <Esp32SimplePacketComs.h>
 #include <Preferences.h>
+#include <Esp32WiFiManager.h>
 #include <wifi/WifiManager.h>
 #include <server/NameCheckerServer.h>
 #include "src/ServoServer.h"
