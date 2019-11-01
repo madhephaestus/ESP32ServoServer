@@ -15,7 +15,7 @@
 #include <Adafruit_BNO055.h>
 #include <utility/imumaths.h>
 #define NUM_IMU_VALUES 15
-class GetIMU: public PacketEvent {
+class GetIMU: public PacketEventAbstract {
 private:
 	Adafruit_BNO055 * bno;
 //	imu::Vector<3> v;
@@ -28,7 +28,7 @@ private:
 public:
 	// Packet ID needs to be set
 	GetIMU() :
-		PacketEvent(1804)	// Address of this event
+		PacketEventAbstract(1804)	// Address of this event
 {
 		started=false;
 		bno=NULL;
