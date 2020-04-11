@@ -17,7 +17,7 @@ UDPSimplePacket coms;
 // WIfi stack managment state machine
 WifiManager manager;
 //The setup function is called once at startup of the sketch
-String * name = new String("hidDevice");
+String * name = new String("kevkat");
 Adafruit_BNO055 bno;
 GetIMU * sensor;
 void setup()
